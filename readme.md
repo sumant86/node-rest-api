@@ -1,8 +1,7 @@
 # Node REST API
 
 A kick start project for implementation of RESTful API with Node.js using ES6.
-It implements best practices in developing RESTful APIs and Domain-Driven
-Design. Features include:
+Features include:
 
 -   Use of the Hexagonal Architecture to arrange the application into logical
     layers, with well-defined responsibilities.
@@ -28,7 +27,8 @@ you should see a response with one product in JSON format.
 
 You can see a OpenAPI (Swagger) definition of the REST API at
 [http://localhost:3000/api-docs/](http://localhost:3000/api-docs/). This
-interface also allows you to interact with the API.
+interface also allows you to interact with the API. Postman Collection provided
+with this repository.
 
 To debug the application in Chrome, point the browser to chrome://inspect and
 click on "Open dedicated DevTools for Node".
