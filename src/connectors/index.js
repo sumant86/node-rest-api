@@ -1,3 +1,3 @@
-export { mysqlAdaptar } from './mysql.adaptar';
-export { mssqlAdaptar } from './mssql.adaptar';
-export { tediousAdaptar } from './tedious.adaptar';
+export { mysqlConnector } from './mysql.connector';
+export { mssqlConnector } from './mssql.connector';
+export { tediousConnector } from './tedious.connector';

@@ -40,6 +40,6 @@ function query(sql) {
         connection.execSql(request);
     });
 }
-export const tediousAdaptar = {
+export const tediousConnector = {
     query,
 };

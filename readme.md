@@ -50,7 +50,7 @@ $ npm run serve
 The source folder contains sub-folders that arrange the application into logical
 layers:
 
--   `routes:` This is the adapter layer of the Hexagonal Architecture. It adapts
+-   `routes`: This is the adapter layer of the Hexagonal Architecture. It adapts
     the HTTP transforms the HTTP requests from the external world to the service
     layer and transforms the objects returned by the service layer to HTTP
     responses.
@@ -67,5 +67,7 @@ layers:
 -   `connectors`: The connector layer allows application to connect with
     database for all queries. Currently connectors are available for MySql &
     Mssql. For this database details credentials need to be added to .env file.
+    MYsql connector is using mysql driver. MSSql connector is using mssql &
+    tedious driver, it is upon user to choose the drivers based on flexiblity.
 
 -   The `utils` folder contains useful utilities and helpers.

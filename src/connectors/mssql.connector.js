@@ -21,6 +21,6 @@ function query(sql) {
         });
     });
 }
-export const mssqlAdaptar = {
+export const mssqlConnector = {
     query,
 };

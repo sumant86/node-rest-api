@@ -21,6 +21,6 @@ function query(sql, args) {
         });
     });
 }
-export const mysqlAdaptar = {
+export const mysqlConnector = {
     query,
 };
