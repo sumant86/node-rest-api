@@ -10,6 +10,7 @@ Features include:
 -   Persistence is implemented using an in-memory repository layer. This can be
     substituted with any persistence technology of your choice.
 -   MSSQL & MySql adaptors are provided for flexiblity to connect with database.
+    Database credentials need to be updated to `.env` file
 
 ## Dev Build
 
@@ -76,9 +77,9 @@ layers:
     persistence for products & Mysql & MSSql connector to connect with database.
 
 -   `connectors`: The connector layer allows application to connect with
-    database for all queries. Currently connectors are available for MySql &
-    Mssql. For this database details credentials need to be added to .env file.
-    MYsql connector is using mysql driver. MSSql connector is using mssql &
-    tedious driver, it is upon user to choose the drivers based on flexiblity.
+    database for all queries. Currently connectors are available for `MySql` &
+    `Mssql`. Mysql connector is using `mysql` driver. MSSql connector is using
+    `mssql` & `tedious` driver, it is upon user to choose the drivers based on
+    flexiblity.
 
 -   The `utils` folder contains useful utilities and helpers.
