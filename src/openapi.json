@@ -1,0 +1,186 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Node REST API",
+        "description": "An API to access Products, Users"
+    },
+    "servers": [
+        {
+            "description": "Dev Server",
+            "url": "http://localhost:3000/api"
+        }
+    ],
+    "paths": {
+        "/products": {
+            "get": {
+                "description": "Get all the Products in the store",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Products"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/products/{id}": {
+            "get": {
+                "description": "Get a specific Product",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "description": "identifier of the Product",
+                        "schema": {
+                            "type": "number",
+                            "example": "1"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Product"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Product not found"
+                    }
+                }
+            }
+        },
+        "/users": {
+            "get": {
+                "description": "Get all the users in the store",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Users"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/users/{id}": {
+            "get": {
+                "description": "Get a specific User",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "description": "identifier of the User",
+                        "schema": {
+                            "type": "number",
+                            "example": "1"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/User"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "User not found"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Product": {
+                "type": "object",
+                "required": ["id", "name"],
+                "properties": {
+                    "id": {
+                        "type": "number",
+                        "example": "1"
+                    },
+                    "name": {
+                        "type": "string",
+                        "example": "Product 1"
+                    }
+                }
+            },
+            "Products": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/components/schemas/Product"
+                }
+            },
+            "User": {
+                "type": "object",
+                "required": [
+                    "id",
+                    "first_name",
+                    "last_name",
+                    "given_name",
+                    "email",
+                    "avatar_url",
+                    "contact"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "number",
+                        "example": "1"
+                    },
+                    "first_name": {
+                        "type": "string",
+                        "example": "Sumant"
+                    },
+                    "last_name": {
+                        "type": "string",
+                        "example": "Shekhar"
+                    },
+                    "given_name": {
+                        "type": "string",
+                        "example": "Sumant"
+                    },
+                    "email": {
+                        "type": "string",
+                        "example": "xxxxxx@gmail.com"
+                    },
+                    "avatar_url": {
+                        "type": "string",
+                        "example": "https://xxxxxxxxx"
+                    },
+                    "contact": {
+                        "type": "number",
+                        "example": "9999999999"
+                    }
+                }
+            },
+            "Users": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/components/schemas/User"
+                }
+            }
+        }
+    }
+}

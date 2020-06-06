@@ -1,4 +1,4 @@
-# Node REST Api
+# Node REST API
 
 A kick start project for implementation of RESTful API with Node.js using ES6.
 It implements best practices in developing RESTful APIs and Domain-Driven
@@ -23,8 +23,12 @@ The dev build starts the application in watch mode. If you make any changes to
 the source files, the application will recompile and restart.
 
 To verify that the application is working correctly, point your browser to
-[http://localhost:8080/api/products/1](http://localhost:8080/api/products/1) -
+[http://localhost:3000/api/products/1](http://localhost:3000/api/products/1) -
 you should see a response with one product in JSON format.
+
+You can see a OpenAPI (Swagger) definition of the REST API at
+[http://localhost:3000/api-docs/](http://localhost:3000/api-docs/). This
+interface also allows you to interact with the API.
 
 To debug the application in Chrome, point the browser to chrome://inspect and
 click on "Open dedicated DevTools for Node".
@@ -32,8 +36,15 @@ click on "Open dedicated DevTools for Node".
 ## Production Build
 
 ```bash
+$ npm run prettier
 $ npm run build
 $ npm run serve
+```
+
+## Prettier
+
+```bash
+$ npm run prettier
 ```
 
 ## Folder Structure
